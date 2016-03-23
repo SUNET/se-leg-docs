@@ -11,7 +11,7 @@
 
 ### Övergripande process
 
-[[/wiki/proofing-skiss.png|align=center]]
+[[/proofing-skiss.png|align=center]]
 
 1. Användaren loggar in hos sin IdP och väljer att initiera id-proofing
 
@@ -40,8 +40,8 @@
 
 5. Användaren går till RA-ombudet och visar upp QR-koden samt en ID-handling för vilken det finns en proofing-process:
 
-  * [Svenskt körkort](wiki/proofing/svensktkorkort)
-  * [Nationellt ID-kort](wiki/proofing/nationelltidkort)
+  * [Svenskt körkort](/proofing/svensktkorkort)
+  * [Nationellt ID-kort](/proofing/nationelltidkort)
   * ...
 
 6. RA-ombudet genererar ett påstående om den utförda proofingen. Påståendet signeras av RA-ombudet och skickas till se-leg OP:n. Data som skickas är ett ID token
