@@ -11,7 +11,7 @@
 
 ### Övergripande process
 
-[[/proofing-skiss.png|align=center]]
+![Skiss](/proofing-skiss.png)
 
 1. Användaren loggar in hos sin IdP och väljer att initiera id-proofing
 
