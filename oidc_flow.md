@@ -1,5 +1,7 @@
 # se-leg proofing flow
 
+![sequence diagram](/oidc_flow_sequence_diagram.png)
+
 1. The user logs in to the RP/IdP with two-factor authentication.
 2. When logged in, the user can initiate the proofing process with the RP/IdP.
 3. The user initiates the vetting process.
