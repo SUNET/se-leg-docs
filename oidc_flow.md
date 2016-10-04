@@ -47,6 +47,8 @@
     code=SplxlOBeZQQYbYS6WxSbIA
     &state=af0ifjsldkj
     ```
-15. To get additional user information, the RP/IdP can use the obtained code
+15. To get an access token, the RP/IdP makes a [OpenID Connect Token Request](http://openid.net/specs/openid-connect-core-1_0.html#TokenRequest).
+16. The OP will send an [OpenID Connect Token Response](http://openid.net/specs/openid-connect-core-1_0.html#TokenResponse).
+17. To get additional user information, the RP/IdP can use the obtained access token
     to make an [OpenID Connect UserInfo Request](http://openid.net/specs/openid-connect-core-1_0.html#UserInfoRequest).
-16. The OP will send an [OpenID Connect UserInfo Response](http://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse).
+18. The OP will send an [OpenID Connect UserInfo Response](http://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse).
