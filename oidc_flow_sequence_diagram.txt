@@ -1,0 +1,26 @@
+title se-leg sequence diagram (proofing flow)
+
+User->RP/IdP: Logging in (1)
+RP/IdP->User: Logged in (2)
+User->RP/IdP: Initiate/reinitate proofing (3)
+RP/IdP->OP: Authentication request for user (4)
+alt success
+    OP->RP/IdP: 200 OK (5)
+    RP/IdP->User: Present nonce as QR code (6)
+else failure
+    OP->RP/IdP: Authentication response (7)
+    RP/IdP->User: Present error message (8)
+end
+User->RA: Present QR code and identity card (9)
+RA->OP: Register users identity (10)
+alt success
+    OP->RA: 200 OK (11)
+else failure
+    OP->RA: Error message (12)
+    RA->User: Ask user to reinitiate proofing (13)
+end
+OP->RP/IdP: Authentication response (14)
+RP/IdP->OP: Token request (15)
+OP->RP/IdP: Token response (16)
+RP/IdP->OP: User info request (17)
+OP->RP/IdP: User info response (18)
