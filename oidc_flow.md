@@ -40,10 +40,9 @@
 14. The vetted identity is returned to the RP/IdP as an OpenID Connect
     authentication response.
 
-    An example response:
+    An example response delivered to the redirect_uri:
     ```
-    HTTP/1.1 302 Found
-    Location: https://client.example.org/cb?
+    https://client.example.org/cb?
     code=SplxlOBeZQQYbYS6WxSbIA
     &state=af0ifjsldkj
     ```
