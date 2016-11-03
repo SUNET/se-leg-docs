@@ -24,8 +24,13 @@
    ```
 5. If the authentication request is registered by the OP, a `200 OK` is
    returned.
-6. The RP/IdP MUST present the generated nonce as a QR code, which the user will
+6. The RP/IdP MUST present the generated nonce and token as a QR code, which the user will
    bring to the RA.
+
+   Example of the generated nonce and token (version + {data object}):
+   ```
+   1{"token": "e7576b96-e795-48c1-baa8-a7a343831ed2", "nonce": "30429ced-8421-4762-b545-794380cf5fb4"}
+   ```
 7. If the authentication request is incorrect, a `4XX` HTTP error code is
    returned.
 8. The RP/IdP SHOULD present an error message to user.
@@ -45,6 +50,12 @@
     https://client.example.org/cb?
     code=SplxlOBeZQQYbYS6WxSbIA
     &state=af0ifjsldkj
+    ```
+    The response will include a authorization header with the token from the QR code.
+
+    Example of the authorization header:
+    ```
+    Authorization: Bearer e7576b96-e795-48c1-baa8-a7a343831ed2
     ```
 15. To get an access token, the RP/IdP makes a [OpenID Connect Token Request](http://openid.net/specs/openid-connect-core-1_0.html#TokenRequest).
 16. The OP will send an [OpenID Connect Token Response](http://openid.net/specs/openid-connect-core-1_0.html#TokenResponse).
